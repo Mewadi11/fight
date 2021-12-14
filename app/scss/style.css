@@ -3,10 +3,6 @@
     visibility: hidden;
     opacity: 0;
   }
-  99% {
-    visibility: hidden;
-    opacity: 1;
-  }
   to {
     visibility: visible;
     opacity: 1;
@@ -17,10 +13,6 @@
   from {
     visibility: hidden;
     opacity: 0;
-  }
-  99% {
-    visibility: hidden;
-    opacity: 1;
   }
   to {
     visibility: visible;

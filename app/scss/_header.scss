@@ -1,7 +1,7 @@
 .header {
   //Hamburger
   &.open {
-    .header__menu {
+    .header__toggle {
       > span:first-child {
         transform: rotate(45deg);
       }
@@ -20,15 +20,19 @@
     visibility: hidden;
     opacity: 0;
     position: fixed;
-    top: 3.725rem;
+    top: 3.75rem;
     right: 0px;
     bottom: 0px;
     left: 0px;
     z-index: 1;
     background-image: linear-gradient($darkBlue, transparent);
   }
+
   nav {
-    padding: 17px 24px;
+    position: relative;
+    background-color: $white;
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
   }
 
   &__logo {
@@ -38,8 +42,8 @@
     }
   }
 
-  &__menu {
-    // mobile Menu
+  &__toggle {
+    // mobile toggle
     > span {
       display: block;
       width: 26px;
@@ -51,6 +55,28 @@
       &:not(:last-child) {
         margin-bottom: 5px;
       }
+    }
+  }
+
+  &__menu {
+    margin: 0px 1.5rem;
+    // width: calc(100% - 3rem);
+    width: 200%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $white;
+    padding: 1.625rem;
+    border-radius: 5px;
+    margin: 0px 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    display: block;
+
+    a {
+      display: block;
+      color: $darkBlue;
+      padding: 0.625rem;
+      text-align: center;
     }
   }
 

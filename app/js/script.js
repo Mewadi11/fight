@@ -11,7 +11,6 @@ btnHamburger.addEventListener('click', function(){
     if(header.classList.contains('open')){
         // body.classList.remove('noscroll');
         header.classList.remove('open');
-        
         fadeElems.forEach(function(element){
             element.classList.remove('fade-in');
             element.classList.add('fade-out');

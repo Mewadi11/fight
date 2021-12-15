@@ -85,11 +85,22 @@ body {
   font-weight: 300;
   color: #9698a6;
   line-height: 1.3;
+}
+
+@media (min-width: 64em) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
+body.noscroll {
   overflow: hidden;
 }
 
-.noscroll {
-  overflow: hidden;
+h1,
+h2,
+h3 {
+  margin-top: 0px;
 }
 
 a,
@@ -99,8 +110,73 @@ a:hover {
 }
 
 .container {
-  max-width: 69.375rem;
+  padding-top: 2.25rem;
+  padding-left: 1.5rem;
+  padding-bottom: 2.25rem;
+  padding-right: 1.5rem;
+  max-width: 69.725rem;
   margin: 0 auto;
+  /* padding-bottom: 2.25rem; */
+  /* padding-right: 1.5rem; */
+}
+
+.container--pall {
+  padding-top: 4.375rem;
+  padding-right: 1.5rem;
+  padding-bottom: 4.375rem;
+  padding-left: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  .container--pall {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.container--py {
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .container--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.container--pt {
+  padding-top: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .container--pt {
+    padding-top: 6rem;
+  }
+}
+
+.container--pr {
+  padding-right: 1.5rem;
+}
+
+.container--pb {
+  padding-bottom: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .container--pb {
+    padding-bottom: 6rem;
+  }
+}
+
+.container--pl {
+  padding-left: 1.5rem;
 }
 
 .flex {
@@ -129,6 +205,7 @@ a:hover {
 
 button,
 .button {
+  display: inline-block;
   padding: 0.875rem 2.1875rem;
   background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
   background: linear-gradient(to right, #31d35c, #2bb7da);
@@ -137,7 +214,15 @@ button,
   cursor: pointer;
   color: white;
   font-weight: 400;
-  overflow: hidden;
+  font-size: 0.875rem;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+  margin-block: 20px;
+}
+
+button:hover,
+.button:hover {
+  opacity: 0.75;
 }
 
 @media (max-width: 63.9375em) {
@@ -259,36 +344,105 @@ button,
   opacity: 1;
 }
 
-.header__cta {
-  font-size: 0.875rem;
-  color: white;
-  -webkit-transition: opacity 300ms ease-in-out;
-  transition: opacity 300ms ease-in-out;
+.hero {
+  background-color: #fafafa;
 }
 
-.header__cta:hover {
-  opacity: 0.75;
+@media (min-width: 64em) {
+  .hero .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
-.teroo__image {
-  border: 1px solid magenta;
+.hero__image {
   position: relative;
-  background-image: url("/images/bg-intro-mobile.svg") !important;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center-center;
+  background-position: center-center !important;
   min-height: 17.5rem;
-  height: 100%;
+  -webkit-transform: translateY(-69px);
+          transform: translateY(-69px);
 }
 
-.teroo__image::before {
+@media (min-width: 64em) {
+  .hero__image {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    height: 41rem;
+    background-image: none;
+  }
+}
+
+.hero__image::before {
+  content: "";
+  position: absolute;
+  width: 165%;
+  height: 100%;
+  background-image: url("/images/bg-intro-desktop.svg");
+  background-size: 93%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.hero__image::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   background-image: url("/images/image-mockups.png");
-  background-size: cover;
+  background-size: 93%;
   background-repeat: no-repeat;
-  background-position: center-center;
+  background-position: center bottom;
+  -webkit-transform: translateY(-69px);
+          transform: translateY(-69px);
+}
+
+.hero__text {
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  .hero__text {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    text-align: left;
+  }
+}
+
+.hero h1 {
+  font-weight: 300;
+  font-size: 2.31rem;
+  margin-bottom: 1.5rem;
+  color: #2d314d;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  .hero h1 {
+    font-size: 3.25rem;
+  }
+}
+
+.hero h1 p {
+  line-break: 1.5;
+  margin: bottom 2.5rem;
+}
+
+.hero h1 h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5625rem;
 }
 /*# sourceMappingURL=style.css.map */

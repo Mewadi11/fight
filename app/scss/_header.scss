@@ -1,4 +1,7 @@
 .header {
+  position: relative;
+  z-index: 1;
+
   //Hamburger
   &.open {
     .header__toggle {
@@ -87,10 +90,9 @@
 
       &::before {
         content: "";
-        position: absolute;
         display: block;
+        position: absolute;
         height: 5px;
-        background: limegreen;
         left: 0;
         right: 0;
         bottom: -30px;

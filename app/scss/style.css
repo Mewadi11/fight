@@ -579,10 +579,6 @@ button:hover,
   }
 }
 
-.article__item {
-  padding: 1.875rem 1.875rem 2.5rem 1.875rem;
-}
-
 @media (min-width: 64em) {
   .article__item {
     padding: 1.875rem 1.5625rem;
@@ -599,15 +595,30 @@ button:hover,
   background-position: center center;
 }
 
-.article__auther {
-  font-size: 1.25rem;
+.article__text {
+  padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+  color: #9698a6;
 }
 
-.article__title {
-  font-size: 1.0625rem;
+@media (min-width: 40em) {
+  .article__text {
+    padding: 1.875rem 1.5625rem;
+  }
 }
 
-.article__description {
+.article__text__auther {
+  font-size: 0.625rem;
+  margin-bottom: 0.75rem;
+}
+
+.article__text__title {
   font-size: 1.0625rem;
+  line-height: 1.2;
+  color: #2d314d;
+  margin-bottom: 0.5rem;
+}
+
+.article__text__description {
+  font-size: 0.8125rem;
 }
 /*# sourceMappingURL=style.css.map */

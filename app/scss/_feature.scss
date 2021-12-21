@@ -1,14 +1,16 @@
 .feature {
-  background-color: antiquewhite;
+  background-color: $white;
 
-  &__into {
+  &__intro {
+    text-align: center;
     //สำหรับแทบเล็ต
     @include breakpoint-up(large) {
       width: 60%;
       margin-bottom: 3.75rem;
-      margin-left: 6rem;
+      // margin-left: 6rem;
       flex-wrap: wrap;
-      margin-right: 6rem;
+      // margin-right: 6rem;
+      text-align: start;
     }
   }
 
@@ -16,14 +18,15 @@
     @include breakpoint-up(medium) {
       display: flex;
       flex-wrap: wrap;
-      margin-left: 6rem;
-      margin-right: 6rem;
+      // margin-left: 6rem;
+      // margin-right: 6rem;
       padding-bottom: 6rem;
+      text-align: center;
     }
   }
   &__item {
     padding: 0.9375rem;
-    border: 1px solid magenta;
+    text-align: center;
 
     @include breakpoint-up(medium) {
       flex: 0 0 50%;
@@ -31,6 +34,9 @@
 
     @include breakpoint-up(large) {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
   &__icon {
@@ -55,5 +61,8 @@
   &__description {
     font-size: 0.875rem;
     line-height: 1.5;
+    @include breakpoint-up(large) {
+      text-align: left;
+    }
   }
 }
